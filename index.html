@@ -16,6 +16,15 @@
                 <span class="flix">Flix</span><span class="tv">TV</span><ion-icon class="earth" name="earth-outline"></ion-icon>
             </h1>
         </a>
+        <!-- Dark/light theme switcher -->
+        <div class="theme-switch">
+            <input type="checkbox" class="checkbox" id="checkbox">
+            <label for="checkbox" class="label">
+                <ion-icon name="partly-sunny-outline" class="sun"></ion-icon>
+                <ion-icon name="moon-outline" class="moon"></ion-icon>
+                <div class="switcher"></div>
+            </label>
+        </div>
         <ul>
             <li class="nav-item">
                 <a href="#about" class="nav-link" id="nav-link">About</a>
@@ -29,18 +38,15 @@
             <li class="nav-item">
                 <a href="#sub" class="nav-link" id="nav-link">Subscribe</a>
             </li>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </ul>
     </nav>
-    <div class="hamburger" id="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-    </div>
-
-    <!-- Dark/light theme switcher -->
-
     <!-- Bars -->
-
+        
     <!-- Hero section -->
     <section class="hero">
         <div class="intro-text">
@@ -62,21 +68,116 @@
             src="https://www.youtube.com/embed/S2lmPIa1iWE" 
             title="YoutTube video player" 
             frameborder="10" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+        </iframe>
+        <div class="stand-1"></div>
+        <div class="stand-2"></div>
         </div>
     </section>
     <!-- About section -->
-
+    <section class="about" id="about">
+        <h3>Watch the Flix</h3>
+        <p>
+            Our primary objective is to share green projects/ideas and knowledge to every person
+            around the world
+        </p>
+        <h3>It's not About the Projects Alone!</h3>
+        <p>
+            We also air documentaries specially made for amazing projects, green lifestle,
+            news, and more.
+        </p>
+    </section>
     <!-- Lightbox image gallery -->
-
-    <!-- FlixTb Stakeholders -->
-
+    <section class="starts" id="stars">
+        <div class="stars-gallery">
+            <a href="./assets/images/wind.jpg" class="big">
+                <img 
+                src="./assets/images/wind.jpg" 
+                alt="photo of Alta wind energy center"
+                title="Alta Wind Energy Center"
+                >
+            </a>
+            <a href="./assets/images/dam.jpg" class="big">
+                <img 
+                src="./assets/images/dam.jpg" 
+                alt="photo of Itaipu dam"
+                title="Itaipu Dam"
+                >
+            </a>
+            <a href="./assets/images/the_geysers.png" class="big">
+                <img 
+                src="./assets/images/the_geysers.png" 
+                alt="photo of The Geysers"
+                title="The Geysers"
+                >
+            </a>
+            <a href="./assets/images/geo.jpg" class="big">
+                <img 
+                src="./assets/images/geo.jpg" 
+                alt="photo of Geothermal power station"
+                title="Cerro Prieto Geothermal Power Station"
+                >
+            </a>
+        </div>
+    </section>
+    <!-- FlixTV Stakeholders -->
+    <section class="people" id="stakeholders">
+        <div class="stakeholders">
+            <div class="persons">
+                <div class="person-1">
+                    <img src="" alt="Changil">
+                    <p class="name">Changil</p>
+                    <p class="role">Founder</p>
+                </div>
+                <div class="person-2">
+                    <img src="" alt="Jane Doe">
+                    <p class="name">Jane Doe</p>
+                    <p class="role">MD</p>
+                </div>
+                <div class="person-3">
+                    <img src="" alt="John Doe JNR">
+                    <p class="name">John Doe JNR</p>
+                    <p class="role">Head Analyst</p>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Email subscription -->
-
+    <section class="sub" id="sub">
+        <h3>Subscribe to our newsletter for updates</h3>
+        <form action="#">
+            <input 
+                type="email"
+                name="email"
+                id="email-sub"
+                class="email-sub"
+                required
+            >
+            <input 
+                type="submit"
+                value="Subscribe"
+                id="submit-btn"
+                class="submit-btn">
+        </form>
+    </section>
     <!-- Social icons -->
-
+    <section class="social">
+        <h3>Connect with us on Social Media</h3>
+        <div class="socicons">
+            <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+        </div>
+    </section>
+    <footer>&copy;2020. All Rights Reserved</footer>
     <!-- Scroll to top button -->
-
+    <i class="scroll-up" id="scroll-up">
+        <img 
+            src="./assets/icons/up-chevron.png"
+            class="socicon up-arrow" 
+            alt="up-arrow"
+        >
+    </i>
     <script src="./assets/js/app.js"></script>
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
@@ -86,6 +187,7 @@
     <script src="/assets/js/simple-lightbox.min.js"></script>
     <script>
         // Simple lightbox initalizer
+        var lightbox = new SimpleLightbox(".stars-gallery a")
     </script>
 </body>
 </html>
