@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
-
+/* #46C2CB;  #6D67E4;*/
 /* CSS Variables */
 :root {
     --normal-font: 400;
@@ -74,8 +74,9 @@ ul{
 .nan-link{
     font-weight: var(--bold-font);
 }
-.humburger{
+.hamburger{
     display:none;
+    
 }
 
 .hero{
@@ -174,15 +175,22 @@ iframe{
 .stars-gallery{
     display:grid;
     grid-template-columns: repeat(4, 1fr);
+    opacity: 0.85;
+    
+}
+.stars-gallery:hover{
+    opacity: 1;
 }
 .stars-gallery img,
 .stars-gallery a{
     width: 100%;
     height: 100%;
+    border: 2px solid var(--secondary-color);
+    border-radius: 1rem;
 }
 .stars-gallery a:first-child {
     grid-row: 1/4;
-    grid-column: 2/5;
+    grid-column: 3/5;
 }
 .people{
     margin-top: 2rem;
@@ -193,13 +201,13 @@ iframe{
     max-width: 1100px;
 }
 .stakeholders img{
-    border-radius: 0.6rem;
+    border-radius: 0.8rem;
 }
 .persons {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     place-items: center;
-    gap: 1rem;
+    gap: 1.2rem;
 }
 .name{
     color: var(--primary-color);
@@ -208,7 +216,7 @@ iframe{
 .role{
     color:var(--secondary-color);
     text-align: center;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
 }
 
 .sub{
